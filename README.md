@@ -1,4 +1,4 @@
-# Welcome to Remix!
+# Dom Remix App + Storybook + Tailwind
 
 - 📖 [Remix docs](https://remix.run/docs)
 
@@ -8,6 +8,12 @@ Run the dev server:
 
 ```shellscript
 npm run dev
+```
+
+Run the Storybook dev server:
+
+```shellscript
+npm run storybook
 ```
 
 ## Deployment
