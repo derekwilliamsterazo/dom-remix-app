@@ -13,7 +13,7 @@
         font-family: "RedHatRegular";      
         font-weight: 400;
         font-display: swap;        
-        src: url(./fonts/static/woff/normal/RedHaText-Regular.woff) format('woff'),
+        src: url(./fonts/static/woff/normal/RedHatText-Regular.woff) format('woff'),
              url(./fonts/static/woff2/normal/RedHatText-Regular.woff2) format('woff2'),
              url(./fonts/static/ttf/normal/RedHatText-Regular.ttf) format('ttf');
     }
