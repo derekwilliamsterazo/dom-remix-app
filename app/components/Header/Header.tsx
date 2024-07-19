@@ -17,7 +17,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
         <div>
         {user ? (
           <>
-            <span className="welcome">
+            <span className="welcome ">
               Welcome, <b>{user.name}</b>!
             </span>
             <Button onClick={onLogout} label="Log out" />

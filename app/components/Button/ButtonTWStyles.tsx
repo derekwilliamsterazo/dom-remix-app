@@ -1,5 +1,5 @@
 export const ButtonTWStyles = {
-    base:'flex gap-1 font-bold rounded transition-all ease-in-out duration-300',
+    base:'flex gap-1 items-center font-bold rounded transition-all ease-in-out duration-300 font-body',
     variants: {
         primary:'hover:bg-primary-700 bg-primary-800 text-white',
         secondary:'hover:bg-primary-700 hover:text-white bg-primary-300',
