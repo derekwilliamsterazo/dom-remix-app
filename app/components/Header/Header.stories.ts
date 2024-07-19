@@ -9,7 +9,7 @@ const meta = {
     title: 'Component/Header',
     component: Header,
     parameters: {        
-        layout: '',
+        layout: 'none',
     },
     tags: ['autodocs'],
     argTypes:{
