@@ -1,9 +1,5 @@
 import type { Config } from "tailwindcss";
 
-const colors = require('tailwindcss/colors');
-const defaultTheme = require('tailwindcss/defaultTheme');
-//console.log(fonts.fontFamily.mono);
-
 export default {
   content: [
     "./app/**/*.{js,jsx,ts,tsx,mdx}",
@@ -34,18 +30,41 @@ export default {
     colors: {
       white:'#fff',
       primary: {
+        900:'#00162a',
         800:'#084B8A',
         700:'#1C77CC',
         300:'#BFD8EF',
+        100:'#e3e9ed'
       },
-      secondary: colors.yellow['100'],
-      neutral: colors.gray,
+      green: { 
+        700:'#4f9c20',
+        100:'#dbe8d6',
+       },
+      red: { 
+        700:'#d51b39',
+        100:'#efd4da' 
+      },
+      yellow: { 700:'#fcbf49' },
+      
+      gray: {
+        900:'#242217',
+        800:'#1c2a35',
+        700:'#2e3c47',
+        600:'',
+        500:'#696f7b',
+        400:'',
+        300:'#bbb',
+        200:'#dcdcdc',
+        100:'#f4f5f6',
+        50:'rgba(23, 30, 36, 0.15)',
+        25:'#fcfcfc'
+      }
     },
     extend: {
       fontFamily: {
-        mono:['"RedHatMonoRegular"', ...defaultTheme.fontFamily.mono],
-        sans:['"RedHatRegular"', ...defaultTheme.fontFamily.sans],
-        body:['"RedHatRegular"', ...defaultTheme.fontFamily.sans]
+        mono:['"RedHatMonoRegular"', "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+        sans:['"RedHatRegular"', "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+        body:['"RedHatRegular"', "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
       }
     },
   },
