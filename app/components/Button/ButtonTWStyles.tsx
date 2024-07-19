@@ -6,7 +6,7 @@ export const ButtonTWStyles = {
         ghost:'hover:text-white hover:border-primary-700 hover:bg-primary-700 hover:text-primary-700 border-primary-800 border-primary-800 border-2 text-primary-800'
     },
     sizes:{
-        sm:'px-2 py-2 text-sm',
+        sm:'px-2 py-1 text-sm',
         md:'px-2 py-3 text-base',
         lg:'px-4 py-4 text-lg'
     }
