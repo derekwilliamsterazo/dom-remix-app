@@ -1,0 +1,45 @@
+import { Meta, Typeset } from '@storybook/blocks';
+
+
+
+ 
+<Meta title="Typography" />
+ 
+export const typography = {
+  type: {
+    sans: ['"RedHatRegular"', ...defaultTheme.fontFamily.sans],
+    mono: '"RedHatMonoRegular"', ...defaultTheme.fontFamily.mono
+  },
+  weight: {
+    medium:'300',
+    regular: '400',
+    semibold: '500',
+    bold: '600',    
+  }
+};
+ 
+export const SampleText = 'Breakers, switches, and wave traps belong in a branch.';
+ 
+# Headings
+ 
+**Font:** Red Hat Text
+ 
+**Weights:** 300(medium), 400(regular), 500(semibold), 600(bold)
+ 
+<Typeset
+  fontSizes={[  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.sans}
+/>
+
+# Text
+**Font:** Red Hat Text
+ 
+**Weights:** 300(medium), 400(regular), 500(semibold), 600(bold)
+
+
+# Numbers
+**Font:** Red Hat Mono
+ 
+**Weights:** 300(medium), 400(regular), 500(semibold), 600(bold)
