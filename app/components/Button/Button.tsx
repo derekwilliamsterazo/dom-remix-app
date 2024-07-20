@@ -38,16 +38,12 @@ export const Button = ({
 
     return(
         <button
-        type="button"
-        className={[setBaseStyles, setStyleVariants, setSize ].join(' ')}      
-        {...props}
-      >
-       
-        {label}
-       
-        
-        
-      </button>
+            type="button"
+            className={[setBaseStyles, setStyleVariants, setSize ].join(' ')}      
+            {...props}
+            >
+                {label}        
+        </button>
     )
 
 }
