@@ -1,4 +1,5 @@
 import React from 'react';
+import { Brand } from '../Brand/Brand';
 import { Button } from '../Button/Button';
 type User = {
     name: string;
@@ -13,14 +14,14 @@ export interface HeaderProps {
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => {
     return (
-        <header className='bg-gray-100 dark:bg-gray-800 w-full flex justify-center'>
+        <header className='bg-gray-100 dark:bg-gray-700 dark:text-white w-full flex justify-center'>
             <div className='wrapper py-2 px-12 flex max-w-7xl w-full items-center justify-between'>
-                <div className='brand'>LOGO HERE</div>
+                <div className='brand'><Brand/></div>
                 
                 <div className='flex items-center gap-2'>
                     {user ? (
                     <>
-                        <span className="welcome ">Welcome, <b>{user.name}</b>!</span>
+                        <span className="welcome text-xs ">Welcome, <b>{user.name}</b>!</span>
                         <Button size='sm' onClick={onLogout} label="Log out" />
                     </>
                     ) : (

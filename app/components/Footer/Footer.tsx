@@ -1,4 +1,5 @@
 import React from 'react';
+import { Brand } from '../Brand/Brand';
 
 
 
@@ -6,9 +7,9 @@ export interface FooterProps {}
 
 export const Footer = ({ }: FooterProps) => {
     return (
-        <footer className=' text-xs font-sans bg-gray-100 dark:bg-gray-800 w-full flex justify-center'>
+        <footer className=' text-xs font-sans bg-gray-500 dark:bg-gray-700 text-white w-full flex justify-center'>
             <div className='wrapper gap-12 py-8 px-12 flex max-w-7xl w-full items-center justify-between'>
-                <div className='brand w-1/5'>LOGO HERE</div>
+                <div className='brand w-1/5'><Brand hasBg={true}/></div>
                 
                 <div className='w-4/5'>
                     <p>© 2025 Dominion. All Rights Reserved.</p>

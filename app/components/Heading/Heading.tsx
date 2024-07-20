@@ -19,7 +19,7 @@ export interface HeadingProps {
 
 export const Heading = ({ title, onPrimaryClick, onSecondaryClick,primaryLabel, secondaryLabel, created,updated}: HeadingProps) => {
     return (
-        <div className='bg-gray-200 dark:bg-gray-800 w-full flex justify-center'>
+        <div className='sticky top-0 bg-gray-200 dark:bg-gray-800 dark:text-gray-200 w-full flex justify-center'>
             <div className='wrapper py-2 px-12 flex max-w-7xl w-full items-center justify-between'>
                 <h1 className='text-head2'>{title}</h1>
                 
