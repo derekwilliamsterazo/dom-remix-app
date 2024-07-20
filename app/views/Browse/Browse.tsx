@@ -3,6 +3,7 @@ import { Header } from '~/components/Header/Header';
 import { Heading } from '~/components/Heading/Heading';
 import { Main } from '~/components/Main/Main';
 import { Footer } from '~/components/Footer/Footer';
+import { Table } from '~/components/Table/Table';
 
 type Action = {
     label: string;
@@ -38,10 +39,9 @@ export const Browse = ({ }: BrowseProps) => {
             <Main
             slot1="Slot 1"
             slot1Styles="bg-gray-200 w-1/5 h-full"
-            slot2="Slot 2"
-            slot2Styles="bg-gray-200 w-3/5 h-full"
-            slot3="Slot 3"
-            slot3Styles="bg-gray-200 w-1/5 h-full"
+            slot2={<Table />}
+            slot2Styles="bg-gray-200 w-4/5 h-full"
+         
             />
 
 
