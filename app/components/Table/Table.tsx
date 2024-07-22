@@ -1,37 +1,56 @@
-import React, { ReactNode } from 'react';
+import React, { Children, PropsWithChildren, ReactNode } from 'react';
 import './table.css'
+
+
+const global = {
+    px:'px-3',
+    py:'py-2',
+    border:'border-solid border-gray-200'
+
+}
 
 function isOdd(n:number) {
     return Math.abs(n % 2) == 1;
  }
 
-const TableHead = ({...props}) => {
+
+
+interface TableRowProps extends PropsWithChildren {
+   rowindex:number
+       
+}
+
+const TableRow = ({rowindex,...props }:TableRowProps) => {
+    const setClass = isOdd(rowindex) ? 'bg-gray-100': 'bg-white';
+
     return (
-        <th className='table-head text-head5 font-bold px-2 py-1 text-left' {...props}></th>
+        <div role='row' aria-rowindex={rowindex} className={['flex w-full border-b',setClass,global.border].join(' ')} {...props}>
+           
+        </div>
     )
 }
 
-const TableRow = ({...props}) => {
+const TableHeadCell = ({...props}) => {
     return (
-        <tr className='table-row' {...props}></tr>
+        <div role='columnheader' className={['table-head w-full text-head5 font-bold ',global.px, global.py ].join(' ')} {...props}></div>
     )
 }
 
 const TableCell = ({...props}) => {
     return (
-        <td className='px-px py-px'{...props}></td>
+        <div role='cell ' className={[' w-full', global.px, global.py ].join(' ')} {...props}></div>
     )
 }
 
 const TableCellInner = ({...props}) => {
     return (
-        <div className='px-1 py-1'{...props}></div>
+        <div className='w-full'{...props}></div>
     )
 }
 
 
 const Columns = [
-    {id:'0a', label:'Title'},
+    {id:'0a', label:'Title', cellWidth:''},
     {id:'1a', label:'Executive Summary'},
     {id:'2a', label:'Data Sources'},
     {id:'3a', label:'Contact'},
@@ -68,7 +87,7 @@ const Quantums = [
       },
       {
         id: "2b",
-        title: "Fuel Price",
+        title: "Fuel1 Price",
         executiveSummary: "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",        
         dataSources: [{id:'0', title:'PI'},{id:'1', title:'Hadoop'}],
         contact:{
@@ -109,48 +128,54 @@ interface quantum {
     updatedDate:string;    
 }
 
+
+
 export interface TableProps {
     columnHeadings?:Array<columnHead>;
-    data?:Array<quantum> ;    
+    data?:Array<quantum> ;
+    label:string;
+    description:string;    
 }
     
 
-export const Table = ({ data=Quantums, columnHeadings=Columns, ...props }: TableProps) => {
-    
+export const Table = ({ data=Quantums, columnHeadings=Columns,label="Quantums", description="Quantums", ...props }: TableProps) => {
+    let rowCount = data.length
     
     return (
-         <table className='table-base font-sans text-sm w-full rounded-lg overflow-hidden  ' {...props}>
-            <thead>
-                <TableRow>
+         <div role='table' aria-label={label} aria-describedby={description} aria-rowcount={rowCount}
+              className={['table-base font-sans text-sm w-full border',global.border].join(' ')} {...props}>
+            
+            <div role='rowgroup'>
+                <TableRow rowindex={0} >
                     { columnHeadings.map((columnHead, index) => (                    
-                        <TableHead key={index}>
+                        <TableHeadCell key={index} className="w-1/2">
                             <TableCellInner >
                                 {columnHead.label}
                             </TableCellInner>                            
-                        </TableHead>
+                        </TableHeadCell>
                     ))}
                 </TableRow>
-            </thead>
+            </div>
 
-            <tbody>
+            <div role='rowgroup'>
                 { data.map((dataItem, index) => ( 
                     
-                    <TableRow className={isOdd(index) ? 'row-odd bg-white':'row-even bg-white'} key={dataItem.id}>
+                  <TableRow key={dataItem.id} rowindex={index + 1} >
                         
                         <TableCell>
-                            <TableCellInner className='bg-gray-200 my-1 mx-1 px-1 py-1 h-full'>
+                            <TableCellInner className=''>
                                 {dataItem.title}
                             </TableCellInner>                        
                         </TableCell>
 
                         <TableCell>                        
-                            <TableCellInner className='bg-gray-200 my-1 mx-1 px-1 py-1 h-full'>
+                            <TableCellInner className=''>
                                 {dataItem.executiveSummary}
                             </TableCellInner>  
                         </TableCell>
 
                         <TableCell>
-                            <TableCellInner className='bg-gray-200 my-1 mx-1 px-1 py-1 h-full'>  
+                            <TableCellInner className=' '>  
                                 {dataItem.dataSources.map((dataSource,index) =>(
                                     <span key={dataItem.id}>{dataSource.title},</span>
                                 ))}
@@ -158,7 +183,8 @@ export const Table = ({ data=Quantums, columnHeadings=Columns, ...props }: Table
                         </TableCell>
 
                         <TableCell>
-                            <TableCellInner className='bg-gray-200 my-1 mx-1 px-1 py-1 h-full'>
+                            <TableCellInner className=''>
+                                
                                 <div className='flex gap-1 items-center px-1 py-1 border-solid border-x rounded border-gray-500'>                                    
                                     <div className={["avatar w-8 h-8 rounded-full border-2 border-green-700 border-solid",`bg-[url("${dataItem.contact.imgUrl}")]`].join(' ')}></div>
                                     <div className='flex flex-col'>
@@ -172,17 +198,18 @@ export const Table = ({ data=Quantums, columnHeadings=Columns, ...props }: Table
                         </TableCell>
 
                     </TableRow>
+                 
                 ))}
-            </tbody>
+            </div>
 
-            <tfoot>
-                
-            </tfoot>
+            <div>
+                table footer
+            </div>
           
 
             
 
-         </table>       
+         </div>       
 
     )
 }

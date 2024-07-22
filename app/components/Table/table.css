@@ -1,6 +1,12 @@
+@import "tailwindcss/base";
 
 
 
 
 
 
+
+/* .table-base:nth-child(even) tr {
+    background-color: "#dcdcdc"
+
+} */
