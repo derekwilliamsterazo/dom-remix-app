@@ -1,3 +1,172 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+
+@layer base {
+    html {
+
+        font-size: 16px;
+        
+        }
+
+    @font-face {
+        font-family: "RedHatRegular";      
+        font-weight: 400;
+        font-display: swap;        
+        src: url(./fonts/static/woff/normal/RedHatText-Regular.woff) format('woff'),
+             url(./fonts/static/woff2/normal/RedHatText-Regular.woff2) format('woff2'),
+             url(./fonts/static/ttf/normal/RedHatText-Regular.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: "RedHatMedium";      
+        font-weight: 500;
+        font-display: swap;        
+        src: url(./fonts/static/woff/normal/RedHaText-Medium.woff) format('woff'),
+             url(./fonts/static/woff2/normal/RedHatText-Medium.woff2) format('woff2'),
+             url(./fonts/static/ttf/normal/RedHatText-Medium.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: "RedHatBold";      
+        font-weight: 600;
+        font-display: swap;        
+        src: url(./fonts/static/woff/normal/RedHaText-Bold.woff) format('woff'),
+             url(./fonts/static/woff2/normal/RedHatText-Bold.woff2) format('woff2'),
+             url(./fonts/static/ttf/normal/RedHatText-Bold.ttf) format('ttf');
+    }
+
+
+
+
+    @font-face {
+        font-family: "RedHatRegularItalic";      
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;        
+        src: url(./fonts/static/woff/italic/RedHaText-Italic.woff) format('woff'),
+             url(./fonts/static/woff2/italic/RedHatText-Italic.woff2) format('woff2'),
+             url(./fonts/static/ttf/italic/RedHatText-Italic.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: "RedHatMediumItalic";      
+        font-weight: 500;
+        font-style: italic;
+        font-display: swap;        
+        src: url(./fonts/static/woff/italic/RedHaText-MediumItalic.woff) format('woff'),
+             url(./fonts/static/woff2/italic/RedHatText-MediumItalic.woff2) format('woff2'),
+             url(./fonts/static/ttf/italic/RedHatText-MediumItalic.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: "RedHatBoldItalic";      
+        font-weight: 600;
+        font-style: italic;
+        font-display: swap;        
+        src: url(./fonts/static/woff/italic/RedHaText-Bolditalic.woff) format('woff'),
+             url(./fonts/static/woff2/italic/RedHatText-Bolditalic.woff2) format('woff2'),
+             url(./fonts/static/ttf/italic/RedHatText-Bolditalic.ttf) format('ttf');
+    }
+
+
+
+
+
+
+
+    /* MONO FONTS */
+    @font-face {
+        font-family: "RedHatMonoRegular";      
+        font-weight: 400;
+        font-display: swap;        
+        src: url(./fonts/static/woff/normal/RedHatMono-Regular.woff) format('woff'),
+             url(./fonts/static/woff2/normal/RedHatMono-Regular.woff2) format('woff2'),
+             url(./fonts/static/ttf/normal/RedHatMono-Regular.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: "RedHatMonoItalic";      
+        font-weight: 400;
+        font-display: swap;
+        font-style: italic;
+        src: url(./fonts/static/wofff/italic/RedHatMono-Italic.woff) format('woff'),
+             url(./fonts/static/woff2/italic/RedHatMono-Italic.woff2) format('woff2'),
+             url(./fonts/static/ttf/italic/RedHatMono-Italic.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: "RedHatMonoBold";      
+        font-weight: 600;
+        font-display: swap;
+        
+        src: url(./fonts/static/woff/normal/RedHatMono-Bold.woff) format('woff'),
+             url(./fonts/static/woff2/normal/RedHatMono-Bold.woff2) format('woff2'),
+             url(./fonts/static/ttf/normal/RedHatMono-Bold.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: "RedHatMonoBoldItalic";      
+        font-weight: 600;
+        font-display: swap;
+        font-style: italic;
+        src: url(./fonts/static/woff/italic/RedHatMono-BoldItalic.woff) format('woff'),
+             url(./fonts/static/woff2/italic/RedHatMono-BoldItalic.woff2) format('woff2'),
+             url(./fonts/static/ttf/italic/RedHatMono-BoldItalic.ttf) format('ttf');
+    }
+
+    /* @font-face {
+        font-family: "Playwrite";      
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+        src: url(./fonts/PlaywriteHRLijeva-Regular.woff) format('woff'),
+             url(./fonts/PlaywriteHRLijeva-Regular.ttf) format('ttf')
+             
+    } */
+
+
+
+
+
+
+
+
+    @supports (font-variation-settings: "wght" 400) {
+        @font-face {
+            font-family: "Playwrite";      
+            font-weight: 400;
+            font-display: swap;
+            font-style: normal;
+            src: url(./fonts/PlaywriteHRLijeva-Regular.woff) format('woff'),
+                 url(./fonts/PlaywriteHRLijeva-Regular.ttf) format('ttf');
+        }
+
+        @font-face {
+            font-family: "RedHatMonoRegular";      
+            font-weight: 400;
+            font-display: swap;
+            font-style: normal;
+            src: url(./fonts/RedHatMono-VariableFont_wght.woff) format('woff'),
+                 url(./fonts/RedHatMono-VariableFont_wght.woff2) format('woff2'),
+                 url(./fonts/RedHatMono-VariableFont_wght.ttf) format('ttf');
+        }
+
+        @font-face {
+            font-family: "RedHatMonoRegularItalic";      
+            font-weight: 400;
+            font-display: swap;
+            font-style: italic;
+            src: url(./fonts/RedHatMono-Italic-VariableFont_wght.woff) format('woff'),
+                 url(./fonts/RedHatMono-Italic-VariableFont_wght.woff2) format('woff2'),
+                 url(./fonts/RedHatMono-Italic-VariableFont_wght.ttf) format('ttf');
+        }
+    }
+
+  
+  }

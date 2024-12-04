@@ -1,0 +1,176 @@
+import { Meta, Typeset } from '@storybook/blocks';
+
+
+
+ 
+<Meta title="Atoms/Typography" />
+ 
+# **Typography**
+Designed to be compatible with the Dominion brand
+
+<div className="flex gap-8 pb-8 font-sans">
+    <div className="grow w-3/5">
+        <div className="text-head2 font-bold ">Body and Headlines</div>
+        <div className="text-lg ">This typeface is used for most text elements other than number data and tabular data. Headings and some labels use bold. Paragraphs, lists, etc. all use regular.</div>
+    </div>
+
+     <div className="grow-0 w-1/5">        
+        <div className="text-lg ">Red Hat Text</div>
+        <div className="text-lg italic ">Italic</div>
+        <div className="text-lg font-semibold ">Medium</div>
+        <div className="text-lg font-bold ">Bold</div>
+    </div>
+
+    <div className="grow-0 w-1/5">        
+        <div className="text-base text-wrap ">ABCDEFGHIJKLMNOPQRSTUVWYZ abcdefghijklmnopqrstuvwxyz</div>
+        <div className="text-base ">0123456789(?.!)</div>
+        
+    </div>
+
+
+
+</div>
+
+export const SampleText = '0123456789: ## ! Breakers, switches, and wave traps belong in a branch.';
+export const SampleBodyText = 'This typeface is used for most text elements other than number data and tabular data. Headings and some labels use bold. Paragraphs, lists, etc. all use regular.';
+ 
+## **Headings**
+ 
+**Font:** Red Hat Text 
+**Weights:** 300(medium), 400(regular), 500(semibold), 600(bold)
+
+### **head1 / Bold**
+<div className='font-sans text-head1 font-bold'>{SampleText}</div>
+
+### **head2 / Bold**
+<div className='font-sans text-head2 font-bold'>{SampleText}</div>
+
+### **head3 / Bold**
+<div className='font-sans text-head3 font-bold'>{SampleText}</div>
+
+### **head4 / Bold**
+<div className='font-sans text-head4 font-bold'>{SampleText}</div>
+
+### **head5 / Bold**
+<div className='font-sans text-head5 font-bold'>{SampleText}</div>
+
+### **head6 / Bold**
+<div className='font-sans text-head6 font-bold'>{SampleText}</div>
+
+### **3xl / Bold**
+<div className='font-sans text-3xl font-bold'>{SampleText}</div>
+
+
+
+
+<div className="py-10"/>
+ 
+
+### **Body Text**
+**Font:** Red Hat Text 
+**Weights:** 300(medium), 400(regular), 500(semibold), 600(bold)
+
+### **lg / Bold**
+<div className='font-sans text-lg font-bold'>{SampleBodyText}</div>
+
+### **lg / Label**
+Letter spacing is modified
+<div className='font-sans text-lg font-bold tracking-[0.075em]'>{SampleText}</div>
+
+### **lg / Medium**
+<div className='font-sans text-lg font-semibold'>{SampleBodyText}</div>
+
+### **lg / Regular**
+<div className='font-sans text-lg'>{SampleBodyText}</div>
+
+
+<div className="py-3"/>
+
+### **base / Bold**
+<div className='font-sans text-base font-bold'>{SampleBodyText}</div>
+
+### **base / Label**
+Letter spacing is modified
+<div className='font-sans text-base font-bold tracking-[0.025em]'>{SampleText}</div>
+
+### **base / Medium**
+<div className='font-sans text-base font-semibold'>{SampleBodyText}</div>
+
+### **base / Regular**
+<div className='font-sans text-base'>{SampleBodyText}</div>
+
+### **base / Regular Italic**
+<div className='font-sans text-base italic'>{SampleBodyText}</div>
+
+
+<div className="py-3"/>
+
+### **sm / Bold**
+<div className='font-sans text-sm font-bold'>{SampleBodyText}</div>
+
+### **sm / Label**
+Letter spacing is modified
+<div className='font-sans text-sm font-bold tracking-[0.05em]'>{SampleText}</div>
+
+### **sm / Medium**
+<div className='font-sans text-sm font-semibold'>{SampleBodyText}</div>
+
+### **sm / Regular**
+<div className='font-sans text-sm'>{SampleBodyText}</div>
+
+### **sm / Regular Link**
+<div className='font-sans text-sm text-primary-700 underline hover:text-primary-800 '>{SampleBodyText}</div>
+
+<div className="py-3"/>
+
+### **xs / Bold**
+<div className='font-sans text-xs font-bold'>{SampleBodyText}</div>
+
+### **xs / Label**
+Letter spacing is modified
+<div className='font-sans text-xs font-bold uppercase tracking-[0.05em]'>{SampleText}</div>
+
+### **xs / Regular**
+<div className='font-sans text-xs'>{SampleBodyText}</div>
+
+### **xxs / Bold**
+<div className='font-sans text-xxs font-bold uppercase tracking-[0.05em]'>{SampleText}</div>
+
+
+<div className="py-10"/>
+
+## **Numbers**
+**Font:** Red Hat Mono 
+**Weights:** 300(medium), 400(regular), 500(semibold), 600(bold)
+
+ ### **2xl-number / Bold**
+<div className='font-mono text-2xl-number font-bold'>{SampleText}</div>
+
+ ### **2xl-number / Regular**
+<div className='font-mono text-2xl-number'>{SampleText}</div> 
+
+ ### **xl-number / Bold**
+<div className='font-mono text-xl-number font-bold'>{SampleText}</div> 
+
+ ### **xl / Regular**
+<div className='font-mono text-xl-number'>{SampleText}</div> 
+
+ ### **base / Bold**
+<div className='font-mono text-base font-bold'>{SampleText}</div> 
+
+ ### **base / Regular**
+<div className='font-mono text-base'>{SampleText}</div> 
+
+
+ ### **small / Bold**
+<div className='font-mono text-small font-bold'>{SampleText}</div>
+
+ ### **small / Medium**
+<div className='font-mono text-small font-semibold'>{SampleText}</div>
+
+ ### **small / Regular**
+<div className='font-mono text-small'>{SampleText}</div> 
+
+### **Extra small / Bold** 
+<div className='font-mono text-xxs font-bold uppercase'>{SampleText}</div>
+
